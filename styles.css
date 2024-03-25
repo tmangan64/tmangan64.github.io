@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/bg_paper.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.big-text {
+  font-size: 3em; /* Adjust the font size as needed */
+  text-align: center;
+}
+
+.small-text {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  text-align: center;
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.container {
+  text-align: center;
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #bbb;
+}

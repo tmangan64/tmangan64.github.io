@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/bg_paper.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Style for the menu */
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the menu items */
+.menu li {
+  display: inline-block;
+}
+
+/* Style for the buttons */
+.menu li button {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #4CAF50;
+  border: none;
+  cursor: pointer;
+}
+
+/* Change the background color of buttons on hover */
+.menu li button:hover {
+  background-color: #45a049;
+}
