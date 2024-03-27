@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GM Wingman</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- Big text center-top-middle -->
+<div class="big-text">GM Wingman</div>
+
+<!-- Smaller text beneath -->
+<div class="small-text">The perfect tool for campaign game masters and players!</div> <br><br>
+
+<h1>Stats sheet</h1>
+<a href="home.html">Home</a>
+
+<div class="container">
+    <table border="0">
+        <tr>
+            <th>Stats</th>
+            <th>Primary stats</th>
+            <th>Skills</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="strength" placeholder="Strength"></td>
+            <td><input type="number" id="armorClass" placeholder="Armour class"></td>
+            <td><input type="checkbox" id="acrobaticsCheckbox"><input type="number" id="acrobatics" placeholder="Acrobatics"></td>
+        </tr>
+        <!-- other rows... -->
+    </table>
+
+    <button onclick="saveData()">Submit</button>
+
+</div>
+
+<script>
+function saveData() {
+    const data = {
+        stats: {
+            strength: document.getElementById('strength').value,
+            dexterity: document.getElementById('dexterity').value,
+            constitution: document.getElementById('constitution').value,
+            intelligence: document.getElementById('intelligence').value,
+            wisdom: document.getElementById('wisdom').value,
+            charisma: document.getElementById('charisma').value
+        },
+        primaryStats: {
+            armorClass: document.getElementById('armorClass').value,
+            initiative: document.getElementById('initiative').value,
+            speed: document.getElementById('speed').value,
+            maxHitPoints: document.getElementById('maxHitPoints').value,
+            hitPoints: document.getElementById('hitPoints').value,
+            tempHitPoints: document.getElementById('tempHitPoints').value,
+            proficiencyBonus: document.getElementById('proficiencyBonus').value
+        },
+        skills: {
+            acrobatics: {
+                checked: document.getElementById('acrobaticsCheckbox').checked,
+                value: document.getElementById('acrobatics').value
+            },
+            // Add other skills here similarly
+        }
+    };
+
+    // Convert data to JSON format
+    const jsonData = JSON.stringify(data);
+
+    // Save JSON data as a file
+    download(jsonData, 'stats.json', 'application/json');
+}
+
+function download(data, filename, type) {
+    const file = new Blob([data], {type: type});
+    const a = document.createElement('a');
+    const url = URL.createObjectURL(file);
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function() {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);  
+    }, 0);
+}
+</script>
+
+</body>
+</html>

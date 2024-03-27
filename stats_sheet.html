@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GM Wingman</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
+<link href="bonusCalc.js">
 </head>
 <body>
 
@@ -16,7 +17,7 @@
 
 
 <h1>Stats sheet</h1>
-<a href="home.html">Home</a>
+<a href="index.html">Home</a>
 
 <div class="container">
     <table border="0">
@@ -31,7 +32,7 @@
             <td><input type="checkbox" id="acrobaticsCheckbox"><output id="acrobatics" placeholder="Acrobatics"></td>
         </tr>
         <tr>
-            <td><input type="number" id="dexsterity" placeholder="Dexterity"></td>
+            <td><input type="number" id="dexterity" placeholder="Dexterity"></td>
             <td><input type="number" id="initiative" placeholder="Initiative"></td>
             <td><input type="checkbox" id="animalHandCheckbox"><output id="animalhand" placeholder="Animal handling"></td>
         </tr>
@@ -88,7 +89,7 @@
         <tr>
             <td></td>
             <td></td>
-            <td><input type="checkbox" id="performanceCheckbox"><output id="perception" placeholder="Performance"></td>
+            <td><input type="checkbox" id="performanceCheckbox"><output id="performance" placeholder="Performance"></td>
         </tr>
         <tr>
             <td></td>
@@ -117,9 +118,9 @@
         </tr>
     </table>
 
-<a href="">Submit</a>
+<button id="updateButton">Update</button>
+<a href="">Save</a>
 
 </div>
-
 </body>
 </html>
