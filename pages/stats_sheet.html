@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GM Wingman</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<script src="bonusCalc.js"></script>
+<link rel="stylesheet" type="text/css" href="../stylesheets/styles.css">
+<script src="../scripts/bonusCalc.js"></script>
 </head>
 <body>
 
@@ -25,95 +25,136 @@
             <th>Stats</th>
             <th>Primary stats</th>
             <th>Skills</th>
+            <th></th>
         </tr>
         <tr>
             <td><input type="number" id="strength" placeholder="Strength"></td>
             <td><input type="number" id="armourClass" placeholder="Armour class"></td>
+            <td>Acrobatics:</td>
             <td><input type="checkbox" id="acrobaticsCheckbox"><output id="acrobatics" placeholder="Acrobatics"></td>
         </tr>
         <tr>
             <td><input type="number" id="dexterity" placeholder="Dexterity"></td>
             <td><input type="number" id="initiative" placeholder="Initiative"></td>
+            <td>Animal handling:</td>
             <td><input type="checkbox" id="animalHandCheckbox"><output id="animalHand" placeholder="Animal handling"></td>
         </tr>
         <tr>
             <td><input type="number" id="constitution" placeholder="Constitution"></td>
             <td><input type="number" id="speed" placeholder="Speed"></td>
+            <td>Arcana:</td>
             <td><input type="checkbox" id="arcanaCheckbox"><output id="arcana" placeholder="Arcana"></td>
         </tr>
         <tr>
             <td><input type="number" id="intelligence" placeholder="Intelligence"></td>
             <td><input type="number" id="maxhp" placeholder="Maximum hit points"></td>
+            <td>Athletics:</td>
             <td><input type="checkbox" id="athleticsCheckbox"><output id="athletics" placeholder="Athletics"></td>
         </tr>
         <tr>
             <td><input type="number" id="wisdom" placeholder="Wisdom"></td>
             <td><input type="number" id="hp" placeholder="Hit points"></td>
+            <td>Deception:</td>
             <td><input type="checkbox" id="deceptionCheckbox"><output id="deception" placeholder="Deception"></td>
         </tr>
         <tr>
             <td><input type="number" id="charisma" placeholder="Charisma"></td>
             <td><input type="number" id="temphp" placeholder="Temporary hit points"></td>
+            <td>History:</td>
             <td><input type="checkbox" id="historyCheckbox"><output id="history" placeholder="History"></td>
         </tr>
         <tr>
             <td></td>
             <td><input type="number" id="proficiencyBonus" placeholder="Proficiency bonus"></td>
+            <td>Insight:</td>
             <td><input type="checkbox" id="insightCheckbox"><output id="insight" id="insight" placeholder="Insight"></td>
         </tr>
         <tr>
             <td></td>
-            <td></td>
+            <td>
+                <select id="skillsDropdown">
+                  <option value="">Bard / Rogue Proficiency</option>
+                  <option value="acrobatics">Acrobatics</option>
+                  <option value="animalHand">Animal Handling</option>
+                  <option value="arcana">Arcana</option>
+                  <option value="athletics">Athletics</option>
+                  <option value="deception">Deception</option>
+                  <option value="history">History</option>
+                  <option value="insight">Insight</option>
+                  <option value="intimidation">Intimidation</option>
+                  <option value="investigation">Investigation</option>
+                  <option value="medicine">Medicine</option>
+                  <option value="nature">Nature</option>
+                  <option value="perception">Perception</option>
+                  <option value="performance">Performance</option>
+                  <option value="persuasion">Persuasion</option>
+                  <option value="religion">Religion</option>
+                  <option value="soh">Sleight of Hand</option>
+                  <option value="stealth">Stealth</option>
+                  <option value="survival">Survival</option>
+                </select>
+            </td>
+            <td>Intimidation:</td>
             <td><input type="checkbox" id="intimidationCheckbox"><output id="intimidation" placeholder="Intimidation"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Investigation:</td>
             <td><input type="checkbox" id="investigationCheckbox"><output id="investigation" placeholder="Investigation"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Medicine:</td>
             <td><input type="checkbox" id="medicineCheckbox"><output id="medicine" placeholder="Medicine"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Nature:</td>
             <td><input type="checkbox" id="natureCheckbox"><output id="nature" placeholder="Nature"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Perception:</td>
             <td><input type="checkbox" id="perceptionCheckbox"><output id="perception" placeholder="Perception"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Performance:</td>
             <td><input type="checkbox" id="performanceCheckbox"><output id="performance" placeholder="Performance"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Persuasion:</td>
             <td><input type="checkbox" id="persuasionCheckbox"><output id="persuasion" placeholder="Persuasion"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Religion:</td>
             <td><input type="checkbox" id="religionCheckbox"><output id="religion" placeholder="Religion"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Slight of hand:</td>
             <td><input type="checkbox" id="sohCheckbox"><output id="soh" placeholder="Slight of hand"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Stealth:</td>
             <td><input type="checkbox" id="stealthCheckbox"><output id="stealth" placeholder="Stealth"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td>Survival:</td>
             <td><input type="checkbox" id="survivalCheckbox"><output id="survival" placeholder="Survival"></td>
         </tr>
     </table>

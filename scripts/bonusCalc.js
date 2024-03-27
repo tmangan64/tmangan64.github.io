@@ -60,3 +60,20 @@ function updateOutput(inputId, outputId, checkboxId) {
 
     outputElement.textContent = outputText;
 }
+
+// Event listener for the skills dropdown
+document.getElementById("skillsDropdown").addEventListener("change", function() {
+    var selectedSkill = this.value;
+    
+    if (selectedSkill) {
+        var proficiencyBonus = parseInt(document.getElementById("proficiencyBonus").value);
+        var outputBox = document.getElementById("outputBox" + selectedSkill.charAt(0).toUpperCase() + selectedSkill.slice(1));
+        var currentOutput = outputBox.textContent;
+        var currentNumber = parseInt(currentOutput);
+        
+        if (!isNaN(currentNumber)) {
+            var updatedNumber = currentNumber + proficiencyBonus;
+            outputBox.textContent = updatedNumber;
+        }
+    }
+});
