@@ -12,7 +12,7 @@ function scaleCalc() {
     updateOutput("intelligence", "nature", "natureCheckbox");
     updateOutput("wisdom", "perception", "perceptionCheckbox");
     updateOutput("charisma", "performance", "performanceCheckbox");
-    updateOutput("charisma", "pursuasion", "pursuasionCheckbox");
+    updateOutput("charisma", "persuasion", "persuasionCheckbox");
     updateOutput("intelligence", "religion", "religionCheckbox");
     updateOutput("dexterity", "soh", "sohCheckbox");
     updateOutput("dexterity", "stealth", "stealthCheckbox");
@@ -21,9 +21,11 @@ function scaleCalc() {
 
 function updateOutput(inputId, outputId, checkboxId) {
     var inputValue = parseInt(document.getElementById(inputId).value);
-    var proficiencyBonus = parseInt(document.getElementById("proficiencyBonus").value) || 0;
     var outputElement = document.getElementById(outputId);
     var outputText = '';
+    
+    // Retrieve proficiency bonus value
+    var proficiencyBonus = parseInt(document.getElementById("proficiencyBonus").value);
 
     if (inputValue < 2) {
         outputText = '-5';
@@ -51,6 +53,7 @@ function updateOutput(inputId, outputId, checkboxId) {
         outputText = 'error';
     }
 
+    // Check if checkbox is checked and add proficiency bonus
     if (document.getElementById(checkboxId).checked) {
         outputText = parseInt(outputText) + proficiencyBonus;
     }
