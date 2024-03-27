@@ -1,4 +1,4 @@
-document.getElementById("updateButton").addEventListener("click", function() {
+function scaleCalc() {
     updateOutput("dexterity", "acrobatics", "acrobaticsCheckbox");
     updateOutput("wisdom", "animalHand", "animalHandCheckbox");
     updateOutput("intelligence", "arcana", "arcanaCheckbox");
@@ -17,9 +17,7 @@ document.getElementById("updateButton").addEventListener("click", function() {
     updateOutput("dexterity", "soh", "sohCheckbox");
     updateOutput("dexterity", "stealth", "stealthCheckbox");
     updateOutput("wisdom", "survival", "survivalCheckbox");
-
-
-});
+};
 
 function updateOutput(inputId, outputId, checkboxId) {
     var inputValue = parseInt(document.getElementById(inputId).value);
