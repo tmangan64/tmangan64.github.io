@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Teague Mangan</title>
-        <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.4/build/98.css"/>
-        <link rel="stylesheet" href="index.css"/>
-    </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teague Mangan</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.4/build/98.css"/>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
     <div class="window" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 32px; width: 250px">
-      <div class="title-bar">
-        <div class="title-bar-text">
-          Test
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Test
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
         </div>
-
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Maximize"></button>
-          <button aria-label="Close"></button>
+        <div class="window-body">
+            <p>Hello, world!</p>
+            <section class="field-row" style="justify-content: flex-end">
+                <button>OK</button>
+                <button>Cancel</button>
+            </section>
         </div>
-      </div>
-      <div class="window-body">
-        <p>Hello, world!</p>
-        <section class="field-row" style="justify-content: flex-end">
-          <button>OK</button>
-          <button>Cancel</button>
-        </section>
-      </div>
     </div>
-  </body>
+
+    <div class="window" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 40px; background-color: #c3c3c3;">
+        <button id="startButton" style="height: 38px; margin: 1px 0 0 1px;">
+            <img src="start.png" style="margin: 2px 5px 2px -7px;">
+            <span style="position:relative; top:-4px;">Start</span>
+        </button>
+    </div>
+
+    <div id="startMenu" class="window" style="display: none;">
+        <!-- Start Menu Content -->
+        <ul>
+            <li>Program 1</li>
+            <li>Program 2</li>
+            <li>Program 3</li>
+        </ul>
+    </div>
+
+    <!-- Linking the script.js file -->
+    <script src="script.js"></script>
+</body>
 </html>
