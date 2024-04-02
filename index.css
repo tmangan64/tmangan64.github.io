@@ -15,3 +15,35 @@ body {
     border: 1px solid #000000;
     padding: 5px;
 }
+
+.desktop-icons{
+  
+  .desktop-icon{
+    width: 115px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    background: no-repeat center top;
+    padding-top: 55px;
+    margin: 10px;
+    
+    &.my-computer{
+      background-image: url(https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png);
+    }
+    &.my-documents{
+      background-image: url(https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png);
+    }
+    
+    &.gmwingman{
+      background-image: url("GMWingman/8bitdice.png");
+    }
+    
+    &.trash-empty{
+      background-image: url(https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png);
+    }
+  }
+}
+
+a {
+    style-"text-decoration: none;"
+}
