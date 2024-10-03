@@ -43,3 +43,13 @@ body {
     }
   }
 }
+
+.window-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns content to the bottom */
+    height: 100%; /* Ensures the body takes the full height of the window */
+    padding: 0px; /* Optional padding */
+    font: apparel;
+    margin: 0px;
+}
