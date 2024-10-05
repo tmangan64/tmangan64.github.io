@@ -16,33 +16,43 @@ body {
     padding: 5px;
 }
 
-.desktop-icons{
-  
-  .desktop-icon{
-    width: 115px;
-    height: 50px;
-    color: #fff;
-    text-align: center;
-    background: no-repeat center top;
-    padding-top: 55px;
-    margin: 10px;
-    
-    &.my-computer{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png);
-    }
-    &.my-documents{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png);
-    }
-    
-    &.gmwingman{
-      background-image: url("GMWingman/8bitdice.png");
-    }
-    
-    &.trash-empty{
-      background-image: url(https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png);
-    }
-  }
+.desktop-icons {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  position: absolute;
+  top: 10px; /* Distance from the top of the screen */
+  left: 10px; /* Align to the left side of the screen */
+  padding: 0;
 }
+
+.desktop-icon {
+  width: 115px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  background: no-repeat center top;
+  padding-top: 55px;
+  margin: 0px 0; /* Add vertical spacing between icons */
+}
+
+.desktop-icon.my-computer {
+  background-image: url(https://win98icons.alexmeub.com/icons/png/computer_explorer-5.png);
+}
+
+.desktop-icon.my-documents {
+  background-image: url(https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-4.png);
+}
+
+.desktop-icon.gmwingman {
+  background-image: url("GMWingman/8bitdice.png");
+  text-decoration: none;
+  color: white;
+}
+
+.desktop-icon.trash-empty {
+  background-image: url(https://win98icons.alexmeub.com/icons/png/recycle_bin_empty-4.png);
+}
+
 
 .window-body {
     display: flex;
@@ -52,4 +62,19 @@ body {
     padding: 0px; /* Optional padding */
     font: apparel;
     margin: 0px;
+}
+
+#clock {
+    background-color: #c3c3c3; /* Same background color as the taskbar */
+    padding: 0 10px;
+    border: 2px solid #fff;
+    box-shadow: inset -1px -1px 0 1px #808080, inset 1px 1px 0 1px #fff;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }

@@ -10,35 +10,34 @@
 <body>
 
   <!-- Desktop icons -->
-  <div>
+<div>
     <div class="desktop-icons">
-      <div class="desktop-icon my-computer" title="About Me">
-        About Me
-      </div>
-      
-      <div class="desktop-icon my-documents" title="My Documents">
-        My projects
-      </div>
-      
-      <div class="desktop-icon gmwingman" title="GMWingman">
-        <a href="./GMWingman/home.html" style="text-decoration:none; color: white;">
-        <link href="/GMWingman/home.html">GMWingman</link></a>
-      </div>
+  <div class="desktop-icon my-computer" title="About Me">
+    About Me
+  </div>
+  
+  <div class="desktop-icon my-documents" title="My Documents">
+    My projects
+  </div>
+  
+  <a href="./GMWingman/home.html" class="desktop-icon gmwingman" title="GMWingman" style="text-decoration:none; color: white;">
+    GMWingman
+  </a>
 
-      <div class="desktop-icon trash-empty" title="Recycle Bin">
-        Recycle Bin
-      </div>
-    </div>
+  <div class="desktop-icon trash-empty" title="Recycle Bin">
+    Recycle Bin
+  </div>
+</div>
+
+</div>
 
     <!-- Popup window -->
-    <div class="window" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 32px; width: 500px">
+    <div class="window" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 32px; width: 600px">
         <div class="title-bar">
             <div class="title-bar-text">
                 About Me
             </div>
             <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
                 <button aria-label="Close"></button>
             </div>
         </div>
@@ -49,12 +48,48 @@
             <p style="text-align: center;">
                Cyber security student
             </p><br>
-            <p>
-                My name is Teague Mangan and I'm a <b>cyber security student</b> originally from Jersey, now based in Manchester. My personal interests are in cars, video game development, hacking and general computing. My chosen field of work is <b>penetration testing</b>.
-            </p>
+            <div style="margin-left: 5px; margin-right: 5px;">
+                <p>
+                    My name is Teague Mangan and I'm a <b>cyber security student</b> originally from Jersey, now based in Manchester. My personal interests are in cars, video game development, hacking and general computing. My chosen field of work is <b>penetration testing</b>
+                </p>
+                <table style="margin-top: 5px; width: 100%">
+                    <tr>
+                        <th>
+                            <p style="margin-bottom: 0px; margin-left: 0px;">
+                                Previous achievements:
+                            </p>
+                        </th>
+                        <th>
+                            Qualifications:
+                        </th>
+                        <th>
+                            My projects:
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>School prefect<br>
+                            Pupil librarian<br>
+                            Naval cadet, Petty Officer<br>
+                            Scouts, Young Leader<br>
+                        </td>
+                        <td>
+                            HTB Certified Pentester (in progress)<br>
+                            RYA First aid<br>
+                            RYA Competant crew<br>
+                            RYA Sailing (Level 4)<br>
+                            LAMDA - acting (Level 4)<br>
+                        </td>
+                        <td>
+                            <a href="./GMWingman/home.html"> GMWingman</a> - a Dungeon & Dragons tool<br><br>
+                            Havenfell - a 2D fantasy action RPG - WIP<br>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <section class="field-row" style="justify-content: flex-end">
-                <button>OK</button>
-                <button>Cancel</button>
+                <button id="cancelButton">Cancel</button>
+
             </section>
         </div>
     </div>
