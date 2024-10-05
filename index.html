@@ -95,12 +95,17 @@
     </div>
 
     <!-- Taskbar & start menu -->
-    <div class="window" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 40px; background-color: #c3c3c3;">
+    <div class="window" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 40px; background-color: #c3c3c3; display: flex; justify-content: space-between; align-items: center;">
         <button id="startButton" style="height: 38px; margin: 1px 0 0 1px;">
             <img src="start.png" style="margin: 2px 5px 2px -7px;">
             <span style="position:relative; top:-4px;">Start</span>
         </button>
+        <!-- Clock added here -->
+        <div id="clock" style="height: 38px; margin: 1px 1px 0 0; padding-right: 10px; display: flex; align-items: center;">
+            <!-- Clock will display here -->
+        </div>
     </div>
+
 
     <div id="startMenu" class="window" style="display: none;">
         
