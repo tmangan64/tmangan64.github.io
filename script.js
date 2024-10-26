@@ -1,11 +1,14 @@
-document.getElementById("startButton").addEventListener("click", function() {
-    var startMenu = document.getElementById("startMenu");
-    if (startMenu.style.display === "none") {
-        startMenu.style.display = "block";
+document.getElementById('startButton').addEventListener('click', function() {
+    const startMenu = document.getElementById('startMenu');
+    
+    // Toggle start menu visibility
+    if (startMenu.style.display === 'none' || startMenu.style.display === '') {
+        startMenu.style.display = 'flex'; // Show the Start Menu (flex to accommodate the gradient bar)
     } else {
-        startMenu.style.display = "none";
+        startMenu.style.display = 'none'; // Hide the Start Menu
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // Get the Close button, Cancel button, and the Welcome window
@@ -46,3 +49,28 @@ setInterval(updateClock, 1000);
 
 // Initialize the clock on page load
 updateClock();
+
+// Variables to reference the About Me window and taskbar icon
+const aboutMeWindow = document.querySelector('.window[title="About Me"]');
+const aboutMeTaskbarIcon = document.getElementById('aboutMeTaskbarIcon');
+const closeButton = document.querySelector('.title-bar-controls button[aria-label="Close"]');
+const aboutMeIcon = document.querySelector('.desktop-icon.my-computer');
+
+// Open About Me window and show taskbar icon
+aboutMeIcon.addEventListener('click', function() {
+    aboutMeWindow.style.display = 'block';
+    aboutMeTaskbarIcon.style.display = 'flex'; // Show the taskbar icon
+});
+
+// Close About Me window and hide taskbar icon
+closeButton.addEventListener('click', function() {
+    aboutMeWindow.style.display = 'none';
+    aboutMeTaskbarIcon.style.display = 'none'; // Hide the taskbar icon
+});
+
+// Cancel button in the About Me window also closes the window and hides the taskbar icon
+const cancelButton = document.querySelector('.window-body button[aria-label="Cancel"]');
+cancelButton.addEventListener('click', function() {
+    aboutMeWindow.style.display = 'none';
+    aboutMeTaskbarIcon.style.display = 'none'; // Hide the taskbar icon
+});

@@ -12,23 +12,22 @@
   <!-- Desktop icons -->
 <div>
     <div class="desktop-icons">
-  <div class="desktop-icon my-computer" title="About Me">
-    About Me
-  </div>
+        <div class="desktop-icon my-computer" title="About Me">
+            About Me
+        </div>
   
-  <div class="desktop-icon my-documents" title="My Documents">
-    My projects
-  </div>
+        <div class="desktop-icon my-documents" title="My Documents">
+        My projects
+        </div>
   
-  <a href="./GMWingman/home.html" class="desktop-icon gmwingman" title="GMWingman" style="text-decoration:none; color: white;">
-    GMWingman
-  </a>
+        <a href="./GMWingman/home.html" class="desktop-icon gmwingman" title="GMWingman" style="text-decoration:none; color: white;">
+        GMWingman
+        </a>
 
-  <div class="desktop-icon trash-empty" title="Recycle Bin">
-    Recycle Bin
-  </div>
-</div>
-
+        <div class="desktop-icon trash-empty" title="Recycle Bin">
+        Recycle Bin
+        </div>
+    </div>
 </div>
 
     <!-- Popup window -->
@@ -89,35 +88,59 @@
             </div>
             <section class="field-row" style="justify-content: flex-end">
                 <button id="cancelButton">Cancel</button>
-
             </section>
         </div>
     </div>
 
     <!-- Taskbar & start menu -->
-    <div class="window" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 40px; background-color: #c3c3c3; display: flex; justify-content: space-between; align-items: center;">
+    <div class="window" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 40px; background-color: #c3c3c3; display: flex; align-items: center;">
+        <!-- Start Button -->
         <button id="startButton" style="height: 38px; margin: 1px 0 0 1px;">
             <img src="start.png" style="margin: 2px 5px 2px -7px;">
             <span style="position:relative; top:-4px;">Start</span>
         </button>
-        <!-- Clock added here -->
-        <div id="clock" style="height: 38px; margin: 1px 1px 0 0; padding-right: 10px; display: flex; align-items: center;">
+
+        <!-- Divider Line -->
+        <div class="divider"></div>
+
+        <!-- Taskbar Icons (including the dynamic 'About Me' icon) -->
+        <div id="taskbarIcons" style="display: flex; flex-grow: 1;">
+            <!-- 'About Me' icon in the taskbar (hidden by default) -->
+            <button class="desktop-icon my-computer" id="aboutMeTaskbarIcon" style="height: 38px; margin: 1px 0 0 1px;">
+                About Me
+            </button>
+        </div>
+
+        <!-- Clock -->
+        <div id="clock" style="height: 38px; margin-left: auto; padding-right: 10px; display: flex; align-items: center;">
             <!-- Clock will display here -->
         </div>
     </div>
 
-
-    <div id="startMenu" class="window" style="display: none;">
-        
+    <div id="startMenu" class="window" style="display: none; width: 135px; position: absolute; bottom: 40px; left: 0;">
+    <!-- Blue gradient bar with Windows 98 text -->
+        <div class="start-menu-bar">
+            <span class="windows98-text">Windows 98</span>
+        </div>
         <!-- Start Menu Content -->
-        <ul>
-            <li>Program 1</li>
-            <li>Program 2</li>
-            <li>Program 3</li>
+        <ul style="list-style-type: none; padding: 8px; margin: 0;">
+            <!-- Top section with programs -->
+            <li class="menu-item">Programs</li>
+            <li class="menu-item">Documents</li>
+            <li class="menu-item">Settings</li>
+            <li class="menu-item">Find</li>
+            <li class="menu-item">Help</li>
+            <li class="menu-item">Run...</li>
+            <hr style="border-color: #c0c0c0;">
+            <!-- Bottom section with shut down -->
+            <li class="menu-item" style="color: red;">Shut Down...</li>
         </ul>
     </div>
+
+
 
     <!-- Linking the script.js file -->
     <script src="script.js"></script>
 </body>
 </html>
+ 

@@ -78,3 +78,73 @@ body {
     justify-content: center;
     white-space: nowrap;
 }
+
+/* Start Menu Bar */
+.start-menu-bar {
+    width: 20px;
+    background: linear-gradient(to bottom, #000080, #1e90ff); /* Blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    writing-mode: vertical-rl; /* Makes the text vertical */
+    text-align: unset;
+    padding: 8px 0;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 12px;
+}
+
+/* Text inside the gradient bar */
+.windows98-text {
+    transform: rotate(180deg); /* Rotates text to match the Windows 98 style */
+    letter-spacing: 1px;
+}
+
+/* Menu items */
+.menu-item {
+    background-color: #e0e0e0;
+    padding: 4px 8px;
+    margin: 2px 0;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #000080; /* Windows 98 blue */
+    color: white;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #c0c0c0;
+}
+
+/* Taskbar icon styling for the About Me tab */
+#aboutMeTaskbarIcon {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    border: 1px solid #808080;
+    padding: 0 10px; /* Adds padding to space out the content */
+    margin-left: 4px;
+    height: 100%;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#aboutMeTaskbarIcon:hover {
+    background-color: #d0d0d0;
+}
+
+/* Divider next to the Start button */
+.divider {
+    width: 1px;
+    height: 75%;
+    background-color: #808080;
+    margin-left: 8px;
+    margin-right: 8px;
+}
