@@ -149,6 +149,13 @@ hr {
   font-family: 'Tahoma', sans-serif;
   font-size: 12px;
   cursor: pointer;
+  gap: 5px; /* Adds space between the image and text */
+}
+
+#aboutMeTaskbarIcon img {
+  width: 16px; /* Adjust the size of the image */
+  height: 16px;
+  margin-right: 5px; /* Adds space between the image and text */
 }
 
 #aboutMeTaskbarIcon:hover {
